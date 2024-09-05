@@ -1,0 +1,5 @@
+<%= form_with url: pages_path, method: :get do |form| %>
+  <%= form.label :username, "Flickr Username: " %>
+  <%= form.text_field :username %>
+  <%= form.submit "Show Me Photos" %>
+<% end %>
