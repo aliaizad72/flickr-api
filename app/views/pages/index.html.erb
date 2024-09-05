@@ -3,3 +3,10 @@
   <%= form.text_field :username %>
   <%= form.submit "Show Me Photos" %>
 <% end %>
+
+<% if @user %>
+  <h2>Photos from <%= @user.username %></h2>
+  <% @photos_list.each do |photo| %>
+    <%= image_tag Flickr.url(photo) %><br>
+  <% end %>
+<% end %>
